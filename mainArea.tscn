@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnqpawb0f32st"]
+
+[ext_resource type="Texture2D" uid="uid://dpy16cdcswagh" path="res://white-paper-texture.jpg" id="1_0fkyo"]
+[ext_resource type="PackedScene" uid="uid://ccsvwgdg0j0ka" path="res://player.tscn" id="2_eev5v"]
+[ext_resource type="PackedScene" uid="uid://cgljg1oi72qsm" path="res://walls.tscn" id="3_0tn4b"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(958, 499)
+scale = Vector2(0.638667, 0.502)
+texture = ExtResource("1_0fkyo")
+
+[node name="player" parent="." instance=ExtResource("2_eev5v")]
+position = Vector2(865, 364)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(956, 498)
+
+[node name="Walls" parent="." instance=ExtResource("3_0tn4b")]
+visible = false
+position = Vector2(5, -7)

@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgljg1oi72qsm"]
+
+[ext_resource type="Texture2D" uid="uid://cy5a3f4jrpl1y" path="res://WhiteRect.png" id="1_y0gwl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivkny"]
+size = Vector2(1935, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnr4a"]
+size = Vector2(21, 1119)
+
+[node name="Walls" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(958, -30)
+shape = SubResource("RectangleShape2D_ivkny")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(953, 1047)
+shape = SubResource("RectangleShape2D_ivkny")
+
+[node name="WhiteRect" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-172, 543)
+scale = Vector2(0.355, 1.182)
+texture = ExtResource("1_y0gwl")
+
+[node name="WhiteRect2" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1976, 512)
+scale = Vector2(0.126025, 1.39712)
+texture = ExtResource("1_y0gwl")
+
+[node name="WhiteRect3" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(870.992, 1109.99)
+scale = Vector2(2.30798, 0.197978)
+texture = ExtResource("1_y0gwl")
+
+[node name="WhiteRect4" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(876, -92)
+scale = Vector2(2.30798, 0.197978)
+texture = ExtResource("1_y0gwl")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-30, 555)
+shape = SubResource("RectangleShape2D_bnr4a")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1941, 550)
+shape = SubResource("RectangleShape2D_bnr4a")

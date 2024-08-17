@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://ccsvwgdg0j0ka"]
+
+[ext_resource type="Texture2D" uid="uid://bu3bc2eyqnoce" path="res://mainCharacter.png" id="1_4xps3"]
+[ext_resource type="Script" path="res://player.gd" id="1_tuxkp"]
+[ext_resource type="Script" path="res://gun_rotation_point.gd" id="2_tr8hf"]
+[ext_resource type="Texture2D" uid="uid://bid3tkhvf8gkf" path="res://gun.png" id="3_fpmpa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ch4w8"]
+
+[node name="player" type="CharacterBody2D"]
+scale = Vector2(0.74, 0.74)
+script = ExtResource("1_tuxkp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.93, 9.365)
+scale = Vector2(10.15, 10.15)
+shape = SubResource("CircleShape2D_ch4w8")
+
+[node name="GunRotationPoint" type="Node2D" parent="."]
+script = ExtResource("2_tr8hf")
+
+[node name="Gun" type="Sprite2D" parent="GunRotationPoint"]
+position = Vector2(117.583, 5.40541)
+rotation = 1.5708
+scale = Vector2(0.305, 0.326684)
+texture = ExtResource("3_fpmpa")
+
+[node name="MainCharacter" type="Sprite2D" parent="."]
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("1_4xps3")

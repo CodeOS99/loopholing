@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://coou5ifls75x2"]
+
+[ext_resource type="Script" path="res://button.gd" id="1_sdfky"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 864.0
+offset_top = 486.0
+offset_right = 1076.0
+offset_bottom = 577.0
+text = "Start
+"
+script = ExtResource("1_sdfky")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(954, 534)
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
